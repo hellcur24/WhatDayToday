@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+
+    
     <title>What Day Is It Today?</title>
 </head>
 <body>
     <h1>What day is it today?</h1>
-    <p><%= kindOfDay %></p>
+    <% if(kindOfDay === "Workday") { %>
+        <h1 style="color:blue"> <%= kindOfDay %> </h1>
+    <% } else { %>
+        <h1 style="color:green"><%= kindOfDay %></h1>
+    <% } %>
+
+    <!--<p><%= kindOfDay %></p>-->
+
+    <table>
+        <tr>
+            <th>First Name:</th>
+            <td><%= person.firstName %></td>
+        </tr>
+        <tr>
+            <th>Last Name:</th>
+            <td><%= person.lastName %></td>
+        </tr>
+        <tr>
+            <th>Age:</th>
+            <td><%= person.age %></td>
+        </tr>
+        <tr>
+            <th>Job:</th>
+            <td><%= person.job %></td>
+        </tr>
+    </table>
+
 </body>
 </html>
